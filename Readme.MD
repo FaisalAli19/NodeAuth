@@ -4,4 +4,4 @@ Created to practice my Node and Express skills.
 
 You can find this app on heroku link below.
 
-Link:
+Link: https://thawing-dawn-10506.herokuapp.com/
