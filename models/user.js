@@ -1,13 +1,10 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-mongoose.connect("mongodb://localhost/nodeauth");
-mongoose.connect("mongodb://heroku_j22sgq5z:pmeabt59odl0dfobe0oq4kqpm9@ds119810.mlab.com:19810/heroku_j22sgq5z");
-
-if(env === "development"){
-    mongoose.connect("mongodb://localhost/nodeauth");
-}else{
+if(process.env){
     mongoose.connect("mongodb://heroku_j22sgq5z:pmeabt59odl0dfobe0oq4kqpm9@ds119810.mlab.com:19810/heroku_j22sgq5z");
+}else{
+    mongoose.connect("mongodb://localhost/nodeauth");
 }
 
 var db = mongoose.connection;
